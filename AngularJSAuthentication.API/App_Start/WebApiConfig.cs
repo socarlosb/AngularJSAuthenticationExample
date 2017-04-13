@@ -7,6 +7,7 @@ using Newtonsoft.Json.Serialization;
 
 namespace AngularJSAuthentication.API
 {
+	//step 3
     public static class WebApiConfig
     {
         public static void Register(HttpConfiguration config)
