@@ -14,9 +14,12 @@ namespace AngularJSAuthentication.API
 	{
 		public void Configuration(IAppBuilder app)
 		{
-			ConfigureOAuth(app); //step 9
 			HttpConfiguration config = new HttpConfiguration();
+
+			ConfigureOAuth(app); //step 9
+
 			WebApiConfig.Register(config);
+			app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll); //step 11
 			app.UseWebApi(config);
 		}
 
